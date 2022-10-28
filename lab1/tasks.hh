@@ -79,7 +79,8 @@ void bubble_sort(int* arr, int N){
 template<int N>
 void wave_sort(int a[N]){
   bubble_sort(a, N);
-
+  
   for(int i=0; i<N; i+=2)
-    swap(a, i, i+1);
+    if(i+1 < N)
+      swap(a, i, i+1);
 }
